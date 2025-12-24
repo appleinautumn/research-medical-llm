@@ -37,7 +37,7 @@ This is an Astro-based static site for documenting and presenting benchmarks and
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/research-medical-llm.git
+   git clone https://github.com/appleinautumn/research-medical-llm.git
    cd research-medical-llm
    ```
 
@@ -48,7 +48,7 @@ This is an Astro-based static site for documenting and presenting benchmarks and
 
 ### Running the Project
 
-- **Development**: `npm run dev` - Starts the development server at `http://localhost:4321`
+- **Development**: `npm run dev` - Starts the development server at `http://localhost:4321/research-medical-llm/`
 - **Build**: `npm run build` - Creates a production build in the `./dist/` directory
 - **Preview**: `npm run preview` - Previews the production build locally
 
