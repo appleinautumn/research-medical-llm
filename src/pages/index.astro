@@ -3,18 +3,18 @@ import Layout from '../components/Layout.astro';
 ---
 
 <Layout>
-  <section class="content-grid">
-    <article>
-      <h3>Benchmark LLM medis terbaru</h3>
-      <a href={import.meta.env.BASE_URL + 'docs/llm-benchmarks/'} class="button">View LLM Benchmarks</a>
-    </article>
-    <article>
-      <h3>Benchmark VLM untuk document understanding</h3>
-      <a href={import.meta.env.BASE_URL + 'docs/vlm-benchmarks/'} class="button">View VLM Benchmarks</a>
-    </article>
-    <article>
-      <h3>Analisis cost vs benefit: API vs self‑host</h3>
-      <a href={import.meta.env.BASE_URL + 'docs/cost-analysis/'} class="button">Cost Analysis</a>
-    </article>
-  </section>
+<section>
+  <article>
+    <h3>LLM Benchmarks for Medical Applications</h3>
+    <p>Comprehensive evaluation of medical language models across benchmarks including ClinBench, USMLE, and MedQA. Compare performance of open-source vs proprietary models for clinical decision support and medical Q&A tasks.</p>
+  </article>
+  <article>
+    <h3>VLM Benchmarks for Document Understanding</h3>
+    <p>Analysis of Vision Language Models on medical document tasks. Evaluate models' ability to interpret medical images, charts, and documents for clinical documentation and diagnostic support.</p>
+  </article>
+  <article>
+    <h3>Cost-Benefit Analysis: API vs Self-Hosted</h3>
+    <p>Detailed comparison of deployment options for medical AI models. Analyze trade-offs between API-based services and self-hosted solutions considering performance, cost, privacy, and scalability.</p>
+  </article>
+</section>
 </Layout>

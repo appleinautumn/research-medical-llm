@@ -3,7 +3,7 @@ title: LLM Benchmarks
 layout: ../../components/Layout.astro
 ---
 
-## 1. Benchmark LLM medis
+# LLM Benchmarks
 
 ### **1. Medical and Clinical Benchmarks**
 The evaluation of LLMs in healthcare has moved beyond simple multiple-choice exams to simulate real-world clinical complexity.
