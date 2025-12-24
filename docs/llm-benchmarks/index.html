@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Medical LLM Research</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;line-height:1.6;color:#333;background-color:#f4f4f9;overflow-x:hidden}a{color:#007bff;text-decoration:none}a:hover{text-decoration:underline}header{padding:1rem;text-align:center;background-color:#007bff;color:#fff;position:relative}header h1{margin-bottom:.5rem;font-size:1.5rem;word-wrap:break-word}nav{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:.5rem}nav a{color:#fff;padding:.5rem 1rem;border-radius:4px;background-color:#ffffff1a;transition:background-color .3s}nav a:hover{background-color:#fff3;text-decoration:none}main{padding:1rem;background-color:#fff;min-height:calc(100vh - 120px);margin:0 auto;max-width:1200px}main h1,main h2,main h3{margin-top:1rem;word-wrap:break-word}main p{margin-bottom:1rem;word-wrap:break-word}main ul{margin-bottom:1rem;padding-left:1.5rem}main table{width:100%;border-collapse:collapse;margin-bottom:1rem;display:block;overflow-x:auto}main table th,main table td{border:1px solid #ddd;padding:.5rem;text-align:left;min-width:100px}main table th{background-color:#f4f4f9}.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:2rem}.content-grid article{background-color:#fff;padding:1rem;border-radius:5px;box-shadow:0 2px 4px #0000001a;border:1px solid #eee}.content-grid h3{margin-bottom:.5rem}.content-grid p{margin-bottom:1rem}.button{display:inline-block;padding:.75rem 1.5rem;background-color:#007bff;color:#fff;text-decoration:none;border-radius:5px;transition:background-color .3s;border:none;font-size:1rem;cursor:pointer;min-width:200px;text-align:center}.button:hover{background-color:#0056b3;transform:translateY(-2px);box-shadow:0 4px 8px #0000001a}.quick-nav{display:flex;flex-direction:column;gap:.5rem;margin-top:2rem}.quick-nav a{display:block;padding:.75rem;background-color:#007bff;color:#fff;text-align:center;text-decoration:none;border-radius:5px;transition:background-color .3s;min-width:auto}.quick-nav a:hover{background-color:#0056b3}.menu-toggle{display:none;flex-direction:column;justify-content:space-between;width:30px;height:21px;background:transparent;border:none;cursor:pointer;padding:0;z-index:10}.hamburger span{display:block;height:3px;width:100%;background:#fff;border-radius:3px;transition:all .3s ease-in-out}@media(max-width:768px){header{padding:.75rem 1rem}header h1{font-size:1.25rem;margin-bottom:.25rem}nav{position:absolute;top:100%;left:0;width:100%;background-color:#007bff;flex-direction:column;align-items:center;padding:1rem 0;display:none;gap:.5rem}nav.active{display:flex}nav a{width:90%;text-align:center}.menu-toggle{display:flex;position:absolute;top:1.2rem;right:1rem}main{padding:1rem .5rem;min-height:calc(100vh - 100px)}.content-grid{grid-template-columns:1fr;gap:1rem}.quick-nav{flex-direction:column}.quick-nav a{width:100%}.button{min-width:150px;padding:.75rem 1rem}}@media(max-width:480px){header h1{font-size:1.1rem}main{padding:.75rem .25rem}.button{min-width:140px;padding:.6rem .8rem;font-size:.9rem}main table{font-size:.85rem}main table th,main table td{min-width:80px;padding:.3rem}}
+</style></head> <body> <header> <h1>Medical LLM & VLM Benchmarks</h1> <button class="menu-toggle" aria-label="Toggle navigation menu"> <div class="hamburger"> <span></span> <span></span> <span></span> </div> </button> <nav> <a href="/">Home</a> <a href="/docs/llm-benchmarks/">LLM Benchmarks</a> <a href="/docs/vlm-benchmarks/">VLM Benchmarks</a> <a href="/docs/cost-analysis/">Cost Analysis</a> </nav> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const n=document.querySelector(".menu-toggle"),e=document.querySelector("nav");n.addEventListener("click",function(){e.classList.toggle("active")}),document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",()=>{e.classList.remove("active")})})});</script> <main> <h2 id="1-benchmark-llm-medis">1. Benchmark LLM medis</h2>
+<h3 id="1-medical-and-clinical-benchmarks"><strong>1. Medical and Clinical Benchmarks</strong></h3>
+<p>The evaluation of LLMs in healthcare has moved beyond simple multiple-choice exams to simulate real-world clinical complexity.</p>
+<ul>
+<li><strong>ClinBench:</strong> Unlike traditional benchmarks derived from exam questions, ClinBench uses <strong>authentic clinical cases from authoritative medical journals</strong>, providing over 2,000 questions that simulate actual practice.</li>
+<li><strong>USMLE &#x26; MedQA:</strong> The United States Medical Licensing Examination (USMLE) remains a standard for clinical reasoning. Recent evaluations on MedQA datasets show that <strong>reasoning models (like OpenAI o1 and GPT-5 Mini)</strong> lead in accuracy, followed closely by models like Claude Opus 4.1 and Grok 4.</li>
+<li><strong>Open Medical-LLM Leaderboard:</strong> This platform aggregates diverse datasets, including <strong>MedMCQA</strong> (Indian medical entrance exams), <strong>PubMedQA</strong> (scientific literature comprehension), and medical subsets of <strong>MMLU</strong> such as Clinical Knowledge and Anatomy.</li>
+<li><strong>Bias Detection:</strong> A critical component of modern medical benchmarking is the injection of <strong>deliberate racial bias</strong> to test robustness. Results indicate that models like o1, Llama 3.1, and Gemini 1.5 Pro show statistically significant performance variations across different races, revealing potential <strong>racial bias</strong> in their training data.</li>
+</ul>
+<h3 id="2-general-reasoning-and-technical-benchmarks"><strong>2. General Reasoning and Technical Benchmarks</strong></h3>
+<p>For general intelligence and specialized technical skills, the industry relies on a suite of “frontier” benchmarks:</p>
+<ul>
+<li><strong>Reasoning &#x26; Math:</strong> <strong>DeepSeek-R1</strong> and <strong>OpenAI o1</strong> currently set the bar for advanced reasoning, excelling in benchmarks like <strong>MATH</strong>, <strong>GSM8K</strong>, and the <strong>AIME 2025</strong>.</li>
+<li><strong>Coding:</strong> Models are evaluated on their ability to generate and verify code using <strong>HumanEval</strong>, <strong>LiveCodeBench</strong>, and <strong>SWE-Bench Verified</strong>.</li>
+<li><strong>Knowledge &#x26; Logic:</strong> <strong>MMLU-Pro</strong> and <strong>GPQA</strong> (Graduate-Level Google-Proof Q&#x26;A) are used to assess higher-level academic and scientific reasoning that goes beyond simple factual recall.</li>
+</ul>
+<h3 id="3-multimodal-and-document-understanding-lvlm"><strong>3. Multimodal and Document Understanding (LVLM)</strong></h3>
+<p>Vision-Language Models (VLMs) require benchmarks that test the integration of visual and textual data.</p>
+<ul>
+<li><strong>Fine-Grained Perception:</strong> <strong>MMDocBench</strong> holistically assesses capabilities through 15 tasks covering research papers, financial reports, and infographics.</li>
+<li><strong>High-Complexity Vision:</strong> <strong>MMMU-Pro</strong> and <strong>MMT-Bench</strong> address benchmark saturation by introducing vision-only inputs and increasing answer options (up to 10) to minimize “lucky guesses”.</li>
+<li><strong>Visual Retrieval:</strong> <strong>ViDoRe</strong> (Visual Document Retrieval) is the primary benchmark for assessing a model’s ability to retrieve specific information from complex document stacks, such as finding the correct page in a financial report.</li>
+</ul>
+<h3 id="4-comparative-performance-open-source-vs-proprietary"><strong>4. Comparative Performance: Open-Source vs. Proprietary</strong></h3>
+<p>Recent benchmarking reveals a closing gap between proprietary and open-source models:</p>
+<ul>
+<li><strong>Differential Diagnosis:</strong> In complex medical cases, the open-source <strong>Llama 3.1 405B</strong> has demonstrated performance <strong>on par with GPT-4</strong>, correctly identifying final diagnoses in 70% of challenging cases.</li>
+<li><strong>Specialized Medical Models:</strong> Models such as <strong>DeepSeek-R1</strong> and <strong>GLM-4.5V</strong> provide competitive alternatives to proprietary systems for complex differential diagnosis and medical imaging analysis.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Category</th><th align="left">Key Benchmarks</th><th align="left">Top Performing / Notable Models</th></tr></thead><tbody><tr><td align="left"><strong>Medical</strong></td><td align="left">ClinBench, MedQA, USMLE</td><td align="left">o1, GPT-5 Mini, DeepSeek-R1, Llama 3.1</td></tr><tr><td align="left"><strong>Reasoning</strong></td><td align="left">MATH, GPQA, AIME</td><td align="left">DeepSeek-R1, OpenAI o1</td></tr><tr><td align="left"><strong>Vision</strong></td><td align="left">MMMU-Pro, MMDocBench</td><td align="left">GLM-4.5V, Qwen2.5-VL</td></tr><tr><td align="left"><strong>Coding</strong></td><td align="left">HumanEval, SWE-Bench</td><td align="left">GPT-4o, DeepSeek-V3</td></tr></tbody></table>
+<h3 id="sumber">Sumber:</h3>
+<ul>
+  <li><a href="https://huggingface.co/blog/leaderboard-medicalllm" target="_blank">Hugging Face: Open Medical-LLM Leaderboard</a></li>
+  <li><a href="https://openreview.net/forum?id=R1u1qWfosc" target="_blank">OpenReview: MMDocBench Submission (R1u1qWfosc)</a></li>
+  <li><a href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2831206" target="_blank">JAMA Health Forum: Open-Source vs. Closed-Source LLMs in Diagnostic Reasoning</a></li>
+  <li><a href="https://sciety.org/articles/activity/10.21203/rs.3.rs-6651111/v1" target="_blank">Sciety: Benchmarking LLMs on USMLE (Preprint)</a></li>
+  <li><a href="https://llm-stats.com/benchmarks" target="_blank">LLM Stats: Benchmarks Overview</a></li>
+  <li><a href="https://www.vals.ai/benchmarks/medqa-03-28-2025" target="_blank">VALS.ai: MedQA Bias Evaluation (March 28, 2025)</a></li>
+  <li><a href="https://www.nature.com/articles/s41415-025-8383-2" target="_blank">Nature: Racial Bias in Medical LLMs (s41415-025-8383-2)</a></li>
+  <li><a href="https://www.vals.ai/benchmarks/medqa" target="_blank">VALS.ai: MedQA Benchmark Overview</a></li>
+</ul> </main> </body></html>
