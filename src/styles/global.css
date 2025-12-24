@@ -10,6 +10,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f9;
+  overflow-x: hidden;
 }
 
 a {
@@ -24,34 +25,54 @@ a:hover {
 header {
   padding: 1rem;
   text-align: center;
+  background-color: #007bff;
+  color: white;
+  position: relative;
 }
 
 header h1 {
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  word-wrap: break-word;
 }
 
-header nav {
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 0.5rem;
 }
 
-header nav a {
-  margin: 0 1rem;
-  color: #fff;
+nav a {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
 }
 
 main {
-  margin-left: 25%;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #fff;
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 main h1, main h2, main h3 {
   margin-top: 1rem;
+  word-wrap: break-word;
 }
 
 main p {
   margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 main ul {
@@ -63,12 +84,15 @@ main table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
+  display: block;
+  overflow-x: auto;
 }
 
 main table th, main table td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
+  min-width: 100px;
 }
 
 main table th {
@@ -87,6 +111,7 @@ main table th {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
 }
 
 .content-grid h3 {
@@ -99,17 +124,24 @@ main table th {
 
 .button {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: #007bff;
   color: #fff;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 200px;
+  text-align: center;
 }
 
 .button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .quick-nav {
@@ -121,30 +153,129 @@ main table th {
 
 .quick-nav a {
   display: block;
-  padding: 0.5rem;
+  padding: 0.75rem;
   background-color: #007bff;
   color: #fff;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  min-width: auto;
 }
 
 .quick-nav a:hover {
   background-color: #0056b3;
 }
 
+/* Mobile menu button (hidden by default) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive styles for mobile */
 @media (max-width: 768px) {
+  header {
+    padding: 0.75rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    display: none;
+    gap: 0.5rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    width: 90%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+  }
+
   main {
-    margin-left: 0;
+    padding: 1rem 0.5rem;
+    min-height: calc(100vh - 100px);
   }
 
   .content-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .quick-nav {
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .quick-nav a {
+    width: 100%;
+  }
+
+  .button {
+    min-width: 150px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .button {
+    min-width: 140px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  main table {
+    font-size: 0.85rem;
+  }
+
+  main table th, main table td {
+    min-width: 80px;
+    padding: 0.3rem;
   }
 }

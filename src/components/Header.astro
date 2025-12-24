@@ -3,4 +3,37 @@
 
 <header>
   <h1>Medical LLM & VLM Benchmarks</h1>
+  <button class="menu-toggle" aria-label="Toggle navigation menu">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/docs/llm-benchmarks/">LLM Benchmarks</a>
+    <a href="/docs/vlm-benchmarks/">VLM Benchmarks</a>
+    <a href="/docs/cost-analysis/">Cost Analysis</a>
+  </nav>
 </header>
+
+<script>
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+  });
+</script>
