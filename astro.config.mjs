@@ -4,5 +4,5 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://appleinautumn.github.io",
-  base: "/research-medical-llm/",
+  base: "/research-medical-llm-html/",
 });
