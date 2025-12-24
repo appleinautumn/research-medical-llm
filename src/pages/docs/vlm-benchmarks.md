@@ -1,5 +1,6 @@
 ---
 title: VLM Benchmarks
+layout: ../../components/Layout.astro
 ---
 
 # VLM Benchmarks for Document Understanding

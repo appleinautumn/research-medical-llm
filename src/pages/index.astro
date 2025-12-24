@@ -1,36 +1,22 @@
 ---
+import Layout from '../components/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Benchmarking Medical LLMs and VLMs for Open Source and Proprietary Solutions" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Medical LLM & VLM Benchmark Documentation</title>
-	</head>
-	<body>
-		<main>
-			<header>
-				<h1>Medical LLM & VLM Benchmark Documentation</h1>
-			</header>
-			<section>
-				<ol>
-					<li>
-						<h3>Benchmark LLM medis terbaru</h3>
-						<a href="/docs/llm-benchmarks/" class="button">View LLM Benchmarks</a>
-					</li>
-					<li>
-						<h3>Benchmark VLM untuk document understanding</h3>						
-						<a href="/docs/vlm-benchmarks/" class="button">View VLM Benchmarks</a>
-					</li>
-					<li>
-						<h3>Analisis cost vs benefit: API vs self‑host</h3>
-						<a href="/docs/cost-analysis/" class="button">Cost Analysis</a>
-					</li>
-				</ol>
-			</section>
-		</main>
-	</body>
-</html>
+<Layout>
+  <section>
+    <ol>
+      <li>
+        <h3>Benchmark LLM medis terbaru</h3>
+        <a href="/docs/llm-benchmarks/" class="button">View LLM Benchmarks</a>
+      </li>
+      <li>
+        <h3>Benchmark VLM untuk document understanding</h3>						
+        <a href="/docs/vlm-benchmarks/" class="button">View VLM Benchmarks</a>
+      </li>
+      <li>
+        <h3>Analisis cost vs benefit: API vs self‑host</h3>
+        <a href="/docs/cost-analysis/" class="button">Cost Analysis</a>
+      </li>
+    </ol>
+  </section>
+</Layout>

@@ -1,5 +1,6 @@
 ---
 title: LLM Benchmarks
+layout: ../../components/Layout.astro
 ---
 
 ## 1. Benchmark LLM medis

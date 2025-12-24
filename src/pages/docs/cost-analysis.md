@@ -1,5 +1,6 @@
 ---
 title: Cost Analysis
+layout: ../../components/Layout.astro
 ---
 
 # Cost Analysis: API vs Self-Deployment
