@@ -11,19 +11,20 @@
     </div>
   </button>
   <nav>
-    <a href="/">Home</a>
-    <a href="/docs/llm-benchmarks/">LLM Benchmarks</a>
-    <a href="/docs/vlm-benchmarks/">VLM Benchmarks</a>
-    <a href="/docs/cost-analysis/">Cost Analysis</a>
+    <a href={import.meta.env.BASE_URL}>Home</a>
+    <a href={import.meta.env.BASE_URL + 'docs/llm-benchmarks/'}>LLM Benchmarks</a>
+    <a href={import.meta.env.BASE_URL + 'docs/vlm-benchmarks/'}>VLM Benchmarks</a>
+    <a href={import.meta.env.BASE_URL + 'docs/cost-analysis/'}>Cost Analysis</a>
   </nav>
 </header>
 
 <script>
   // Mobile menu toggle functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
 
+  if (menuToggle && nav) {
     menuToggle.addEventListener('click', function() {
       nav.classList.toggle('active');
     });
@@ -35,5 +36,6 @@
         nav.classList.remove('active');
       });
     });
-  });
+  }
+});
 </script>
