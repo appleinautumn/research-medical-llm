@@ -1,20 +1,12 @@
 ---
 import Layout from '../components/Layout.astro';
+
+// Read the markdown file
+const latestMd = await Astro.glob('../pages/docs/latest.md');
+const { Content, frontmatter } = latestMd[0];
 ---
 
 <Layout>
-<section>
-  <article>
-    <h3>LLM Benchmarks for Medical Applications</h3>
-    <p>Comprehensive evaluation of medical language models across benchmarks including ClinBench, USMLE, and MedQA. Compare performance of open-source vs proprietary models for clinical decision support and medical Q&A tasks.</p>
-  </article>
-  <article>
-    <h3>VLM Benchmarks for Document Understanding</h3>
-    <p>Analysis of Vision Language Models on medical document tasks. Evaluate models' ability to interpret medical images, charts, and documents for clinical documentation and diagnostic support.</p>
-  </article>
-  <article>
-    <h3>Cost-Benefit Analysis: API vs Self-Hosted</h3>
-    <p>Detailed comparison of deployment options for medical AI models. Analyze trade-offs between API-based services and self-hosted solutions considering performance, cost, privacy, and scalability.</p>
-  </article>
-</section>
+  <h1>{frontmatter.title}</h1>
+  <Content />
 </Layout>
