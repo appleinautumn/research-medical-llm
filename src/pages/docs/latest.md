@@ -1,4 +1,8 @@
-Untuk riset ini, yang relevan sekarang: untuk LLM medis ada beberapa benchmark baru (MedS‑Bench, MedExQA, AMEGA, MedQA/MedMCQA/USMLE), dan untuk VLM dokumen ada MMDocBench, DocVQA, ChartQA, FlowVQA, dsb.  Dari sisi price‑to‑performance, umumnya: kalau volume token relatif kecil–menengah dan tidak butuh kontrol data ketat, **API** (Grok, GPT‑4o, Claude, dll.) lebih ekonomis; kalau trafik tinggi dan workload stabil, medical LLM on‑prem (Med42/Meditron 70B) mulai unggul di cost per token, tapi capex dan kompleksitas naik jauh.[1][2][3][4][5][6][7][8][9][10][11]
+Untuk LLM medis ada beberapa benchmark baru (MedS‑Bench, MedExQA, AMEGA, MedQA/MedMCQA/USMLE).
+
+Untuk VLM dokumen ada MMDocBench, DocVQA, ChartQA, FlowVQA, dsb.
+
+Dari sisi price‑to‑performance, umumnya: kalau volume token relatif kecil–menengah dan tidak butuh kontrol data ketat, **API** (Grok, GPT‑4o, Claude, dll.) lebih ekonomis; kalau trafik tinggi dan workload stabil, medical LLM on‑prem (Med42/Meditron 70B) mulai unggul di cost per token, tapi capex dan kompleksitas naik jauh.[1][2][3][4][5][6][7][8][9][10][11]
 
 ## LLM medis dan benchmark terbaru
 Contoh benchmark / paper penting (open‑source & proprietary) untuk domain klinis:  
