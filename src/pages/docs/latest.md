@@ -184,7 +184,7 @@ Secara price‑to‑performance murni, GPT‑5 adalah titik yang sangat dominan:
 
 <div class="image-container">
 
-![plot](/images/plot.png)
+![plot](/research-medical-llm-html/images/plot.png)
 
 </div>
 
