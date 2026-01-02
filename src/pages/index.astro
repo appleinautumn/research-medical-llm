@@ -1,9 +1,11 @@
 ---
 import Layout from '../components/Layout.astro';
+import type { MarkdownInstance } from 'astro';
 
-// Read the markdown file
-const latestMd = await Astro.glob('../pages/docs/latest.md');
-const { Content, frontmatter } = latestMd[0];
+// Type the glob result properly
+const mdFiles = import.meta.glob<MarkdownInstance<Record<string, any>>>('../pages/docs/latest.md', { eager: true });
+const latestMd = Object.values(mdFiles)[0];
+const { Content, frontmatter } = latestMd;
 ---
 
 <Layout>
